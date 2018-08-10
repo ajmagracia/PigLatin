@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pig Latin Translator</title>
+  <script type="text/javascript" src="piglatin.js">
+  </script>
+</head>
+
+<body>
+  <link rel="stylesheet" type="text/css" href="piglatin.css">
+
+  <h1>Pig Latin Translator</h1>
+  <p>Give it a try!</p>
+  <br>
+
+  <!-- <form action="/action_page.php">
+  <textarea name="message" rows="10" cols="30">Type a word or words...</textarea>
+  <br>
+  <input type="submit">
+</form> -->
+
+
+  <!-- <form name="" action=""
+onsubmit="return validateForm()" method="post">
+Name: <input type="text" name="firstname">
+<input type="submit" value="Submit"> -->
+
+  <div>
+    <form action>
+
+      <label class="typeword" for="typeword">Type a word or words:</label><br><br>
+      <input id="input" placeholder="Any words...">
+      <br><br>
+      <button type="button" id="say">Translate!</button>
+
+      <input id=reset type="reset" value="Reset">
+    </form>
+    <br>
+
+
+  </div>
+  <!--NOTE: Method 2, see .js
+  <div id="result">
+    <label class="typeword">Result:</label><br><br>
+
+    <input type="textbox" id="output"></input>
+  </div> -->
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br><br>
+  <br>
+  <br>
+
+
+  <footer>
+    <p>Created by:<br> Sarah + AJ + Sofia</p>
+  </footer>
+  <script>
+    document.getElementById('say').addEventListener('click', pigLatin);
+  </script>
+</body>
+
+</html>
