@@ -1,25 +1,24 @@
-input, textarea{
+input, textarea {
   width: 500px;
   height: 100px;
   font-family: Futura;
   position: inherit;
   font-size: 20px;
-
 }
 
 #reset {
-  width:auto;
+  width: auto;
   height: auto;
 }
 
-.typeword  {
+.typeword {
   width: 500px;
   font-family: fantasy;
   position: inherit;
   font-size: 40px;
 }
 
-#input{
+#input {
   width: 500px;
   height: 50px;
   font-family: Futura;
@@ -27,27 +26,26 @@ input, textarea{
   font-size: 15px;
 }
 
-
 body {
-    background: url(pig1.tiff);
-    background-repeat: no-repeat;
-    background-size: cover;
-      font-family: fantasy;
+  background: url(http://www.wallpapermaiden.com/image/2016/09/10/pig-big-front-view-muzzle-animal-5727.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: fantasy;
 }
 
 h1 {
-
-    font-family: Futura;
-    font-size: 70px;
-    color: black;
-    text-align: left;
-    text-decoration: underline;
+  font-family: Futura;
+  font-size: 70px;
+  color: black;
+  text-align: left;
+  text-decoration: underline;
 }
 
 p {
-    font-family: Futura;
-    font-size: 40px;
-    color: black;
-    text-align: left;
-
+  font-family: Futura;
+  font-size: 40px;
+  color: black;
+  text-align: left;
 }
