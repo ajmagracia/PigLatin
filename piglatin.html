@@ -3,7 +3,7 @@
 
 <head>
   <title>Pig Latin Translator</title>
-  <script type="text/javascript" src="piglatin.js">
+  <script type="text/javascript" src="piglatin2.js">
   </script>
 </head>
 
@@ -29,9 +29,9 @@ Name: <input type="text" name="firstname">
   <div>
     <form action>
 
-      <label class="typeword" for="typeword">Type a word or words:</label><br><br>
-      <input id="input" placeholder="Any words...">
-      <br><br>
+      <label class="typeword" for="typeword">Type a word or words:</label><br>
+      <textarea id="input" placeholder="Any words..."></textarea>
+      <br>
       <button type="button" id="say">Translate!</button>
 
       <input id=reset type="reset" value="Reset">
@@ -40,25 +40,17 @@ Name: <input type="text" name="firstname">
 
 
   </div>
-  <!--NOTE: Method 2, see .js
+
   <div id="result">
-    <label class="typeword">Result:</label><br><br>
+    <label class="typeword">Result:</label><br>
 
-    <input type="textbox" id="output"></input>
-  </div> -->
-
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><br>
-  <br>
-  <br>
+    <textarea type="textbox" id="output"></textarea>
+  </div>
 
 
-  <footer>
-    <p>Created by:<br> Sarah + AJ + Sofia</p>
-  </footer>
+
+    <!-- Created by: Sarah + AJ + Sofia -->
+
   <script>
     document.getElementById('say').addEventListener('click', pigLatin);
   </script>
