@@ -10,8 +10,8 @@ function pigLatin() {
   let splitString = string.split(" ")
 
   function pigLatined(string) {
-    //run the following on each member of the supplied string (now an individual word),
-    string.forEach(function (string) {
+    //run the following on each member of the supplied string (now an individual word), and save in newArray
+    newArray = string.map(function (string) {
       //check for punctuation and remove it if there (at the beginning or end of the word)
       var noPunc = checkPunctuation(string)
       //check if the word was originally capitalized and store the result (true/false) for later
@@ -20,10 +20,10 @@ function pigLatin() {
       var latined = transform(noPunc)
       //fix the caps
       var capsFixed = fixCaps(latined, rememberCaps)
-      //return the punctuation
+      //put the punctuation back
       var punctFixed = fixPunct(capsFixed)
-      //add the word to newArray
-      newArray.push(punctFixed)
+      //return the final product
+      return punctFixed
     })
     //join newArray into a string
     let joined = newArray.join(" ")
