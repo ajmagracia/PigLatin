@@ -1,11 +1,11 @@
-//TODO: functionality for words in all capitals to retain the capitalization
+//TODO: Decide on words with inner capitalization (e.g. McDonald's, iPod)
 
 function pigLatin() {
   var string = document.getElementById('input').value;
   //create array to store pig latin'd string, and variables to hold punctuation
   var newArray = [] //for pig latin'd string
-  var keepStart //for beginning punctuation
-  var endStart //for end punctuation
+  var keepStart //for punctuation at the beginning of the word
+  var endStart //for punctuation at the end of the word
   //split string into individual words
   let splitString = string.split(" ")
 
@@ -14,21 +14,17 @@ function pigLatin() {
     newArray = string.map(function (string) {
       //check for punctuation and remove it if there (at the beginning or end of the word)
       var noPunc = checkPunctuation(string)
-      //check if the word was originally capitalized and store the result (true/false) for later
-      var rememberCaps = /[A-Z]/.test(noPunc[0])
       //pig latin the word
       var latined = transform(noPunc)
       //fix the caps
-      var capsFixed = fixCaps(latined, rememberCaps)
+      var capsFixed = fixCaps(noPunc, latined)
       //put the punctuation back
       var punctFixed = fixPunct(capsFixed)
       //return the final product
       return punctFixed
     })
-    //join newArray into a string
-    let joined = newArray.join(" ")
-    //return the string for use outside function
-    return joined
+    //join newArray into a string and return
+    return newArray.join(" ")
   }
 
   //This function checks if a string begins or ends with punctuation, removes said punctuation (if any), and stores said punctuation (if any) to put it back after transformation
@@ -45,12 +41,10 @@ function pigLatin() {
     keepStart = string.slice(0, testLetter)
     //test for end symbols on the string with its beginning symbols removed and returns index of the first end symbol
     let testEndPunct = noStartPunct.search(endPunct)
-    //slices from the beginning to the index (all that is left now is alphanumerics)
-    let noPunct = noStartPunct.slice(0, testEndPunct)
     //slices from the index to the end (keeping the end symbols)
     keepEnd = noStartPunct.slice(testEndPunct)
-    //returns the remaining letters-only string
-    return noPunct
+    //slices from the beginning to the index (all that is left now is alphanumerics) and returns the result
+    return noStartPunct.slice(0, testEndPunct)
   }
 
   //this function checks which pig latin rule to apply and applies it
@@ -80,16 +74,21 @@ function pigLatin() {
     return transformed
   }
 
-  //this function takes a string and a boolean set previously (which noted whether the word was originally capitalized or not), and recapitalizes
-  //the code should be self-explanitory
-  function fixCaps(string, wasCap) {
-    if (wasCap) {
-      let lower = string.toLowerCase()
+  //this function checks the original capitalization of the word and applies a fix
+  function fixCaps(checkString, editString) {
+    //if the word originally had no lowercase letters, it completely capitalizes the word
+    //this is so the concatenated 'ay' is also capitalized
+    if (!/[a-z]/.test(checkString)) {
+      var fixedCaps = editString.toUpperCase()
+      //if the word was originally a normal capitalized word, the first letter of the word is now the capitalized letter
+    } else if (/[A-Z]/.test(checkString[0])) {
+      let lower = editString.toLowerCase()
       let splitLower = [...lower]
       splitLower[0] = splitLower[0].toUpperCase()
       var fixedCaps = splitLower.join("")
+      //otherwise nothing is changed
     } else {
-      var fixedCaps = string
+      var fixedCaps = editString
     }
     return fixedCaps
   }
@@ -107,5 +106,4 @@ function pigLatin() {
   //NOTE: Method 2, see html
   //displays the result in the text box on the webpage
   document.getElementById('output').value = result;
-
 }
