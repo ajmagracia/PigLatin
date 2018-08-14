@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pig Latin Translator</title>
+  <script type="text/javascript" src="piglatin2.js">
+  </script>
+</head>
+
+<body>
+  <link rel="stylesheet" type="text/css" href="piglatin2.css">
+
+  <h1>Pig Latin Translator</h1>
+  <p>Give it a try!</p>
+  <br>
+
+  <div>
+    <form action>
+
+      <label class="typeword" for="typeword">Type whatever you want to see in Pig Latin:</label><br>
+      <textarea id="input" placeholder="Whatever you want"></textarea>
+      <br>
+      <button type="button" id="say">Translate!</button>
+
+      <input type="reset" id=reset value="Reset">
+      <br>
+
+
+
+      <div id="result">
+        <label class="typeword">Result:</label><br>
+
+        <textarea type="textbox" id="output" placeholder="Ateverwhay ouyay antway"></textarea>
+      </div>
+    </form>
+  </div>
+
+
+
+  <!-- Created by: Sarah + AJ + Sofia -->
+
+  <script>
+    document.getElementById('say').addEventListener('click', pigLatin);
+  </script>
+</body>
+
+</html>
