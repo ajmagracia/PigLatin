@@ -1,4 +1,4 @@
-//TODO: Decide on words with inner capitalization (e.g. McDonald's, iPod)
+//TODO: add functionality for single non-word letters (e.g. I got a D)
 
 function pigLatin() {
   var string = document.getElementById('input').value;
@@ -76,9 +76,9 @@ function pigLatin() {
 
   //this function checks the original capitalization of the word and applies a fix
   function fixCaps(checkString, editString) {
-    //if the word originally had no lowercase letters, it completely capitalizes the word
+    //if the word originally had no lowercase letters, and is more than one letter long (to account for capital A, I, and O), it completely capitalizes the transformed word
     //this is so the concatenated 'ay' is also capitalized
-    if (!/[a-z]/.test(checkString)) {
+    if (!/[a-z]/.test(checkString) && checkString.length > 1) {
       var fixedCaps = editString.toUpperCase()
       //if the word was originally a normal capitalized word, the first letter of the word is now the capitalized letter
     } else if (/[A-Z]/.test(checkString[0])) {
