@@ -1,7 +1,7 @@
 textarea {
-  width: 520px;
+  width: 44rem;
   height: 200px;
-  font-family: Futura;
+  font-family: 'Acme', sans-serif;
   position: inherit;
   font-size: 20px;
 }
@@ -12,16 +12,16 @@ textarea {
 }
 
 .typeword {
-  width: 500px;
-  font-family: fantasy;
+  width: 37rem;
+  font-family: 'Acme', sans-serif;
   position: inherit;
   font-size: 40px;
 }
 
 #input {
-  width: 520px;
+  width: 44rem;
   height: 100px;
-  font-family: Futura;
+  font-family: 'Acme', sans-serif;
   position: inherit;
   font-size: 15px;
 }
@@ -32,11 +32,11 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: fantasy;
+  font-family: 'Luckiest Guy', cursive;
 }
 
 h1 {
-  font-family: Futura;
+  font-family: 'Luckiest Guy', cursive;
   font-size: 70px;
   color: black;
   text-align: left;
@@ -44,7 +44,7 @@ h1 {
 }
 
 p {
-  font-family: Futura;
+  font-family: 'Gentium Basic', serif;
   font-size: 40px;
   color: black;
   text-align: left;
