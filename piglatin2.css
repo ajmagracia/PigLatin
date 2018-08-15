@@ -33,7 +33,8 @@ textarea {
 
 #output {
   border: 1px #FFF;
-  text-align: center;
+  font-family: 'Boogaloo', cursive;
+  text-align: left;
 }
 
 body {
