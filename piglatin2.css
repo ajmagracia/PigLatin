@@ -3,12 +3,17 @@ textarea {
   height: 200px;
   font-family: 'Acme', sans-serif;
   position: inherit;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 #reset {
   width: auto;
   height: auto;
+}
+
+#result {
+  width: 44rem;
+  text-align: right;
 }
 
 .typeword {
@@ -23,7 +28,12 @@ textarea {
   height: 100px;
   font-family: 'Acme', sans-serif;
   position: inherit;
-  font-size: 15px;
+  font-size: 23px;
+}
+
+#output {
+  border: 1px #FFF;
+  text-align: center;
 }
 
 body {
@@ -48,4 +58,26 @@ p {
   font-size: 40px;
   color: black;
   text-align: left;
+}
+
+.speech-bubble {
+  width: 44rem;
+  position: relative;
+  background: #FFF;
+  border-radius: .4em;
+}
+
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 3.125em solid transparent;
+  border-left-color: #FFF;
+  border-right: 0;
+  border-top: 0;
+  margin-top: -1.562em;
+  margin-right: -3.125em;
 }
